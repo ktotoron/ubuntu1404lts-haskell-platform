@@ -1,0 +1,8 @@
+---
+# file: install.yml
+- name: install ghc-mod
+  command: cabal update
+
+- name: install ghc-mod
+  command: cabal install ghc-mod
+
