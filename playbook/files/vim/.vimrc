@@ -9,10 +9,11 @@ filetype plugin indent off
 if has('vim_starting')
   set nocompatible " Be iMproved
   set runtimepath+=~/.vim/bundle/neobundle.vim
-  NeoBundleFetch 'Shougo/neobundle.vim'
 
   call neobundle#begin(expand('~/.vim/bundle/'))
     "" ここらへんにプラグインを追加
+    NeoBundleFetch 'Shougo/neobundle.vim'
+
     " neocomplete.vimのgitアドレス
     NeoBundle 'Shougo/neocomplete.vim'
     " vimproc用
