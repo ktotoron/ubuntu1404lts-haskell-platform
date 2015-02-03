@@ -1,0 +1,5 @@
+---
+# file: zsh.yml
+- hosts: all
+  roles:
+    - zsh

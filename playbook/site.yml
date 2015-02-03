@@ -2,3 +2,4 @@
 # file: site.yml
 - include: haskell_platform.yml
 - include: vim.yml
+- include: zsh.yml
