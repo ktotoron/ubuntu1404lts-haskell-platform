@@ -1,6 +1,5 @@
 ---
 # file: install.yml
 - name: clone neobundle
-  git: repo={{ vim_neobundle_git_uri }}
-       dest={{ vim_neobundle_dir }}
+  git: "repo={{ vim_neobundle_git_uri }} dest={{ vim_neobundle_dir }}"
 

@@ -1,15 +1,15 @@
 ---
 # file: download.yml
 - name: zsh setting
-  shell: chsh -s {{ zsh_binary_file }}  {{ user_name }}
+  sudo: yes
+  shell: "chsh -s {{ zsh_binary_file }}  {{ user_name }}"
 
 - name: zsh antigen
-  git: repo={{ zsh_antigen_git_url }}
-       dest={{ zsh_antigen_dir }}
+  git: "repo={{ zsh_antigen_git_url }} dest={{ zsh_antigen_dir }}"
 
 - name: copy $HOME/.zshrc.antigen
-  copy: src={{ zsh_zshrc_antigen_host_file }} dest={{ zsh_zshrc_antigen_file }}
+  copy: "src={{ zsh_zshrc_antigen_host_file }} dest={{ zsh_zshrc_antigen_file }}"
 
 - name: copy $HOME/.zshrc
-  copy: src={{ zsh_zshrc_host_file }} dest={{ zsh_zshrc_file }}
+  copy: "src={{ zsh_zshrc_host_file }} dest={{ zsh_zshrc_file }}"
 
