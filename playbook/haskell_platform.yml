@@ -1,0 +1,5 @@
+---
+# file: haskell_platform.yml
+- hosts: all
+  roles:
+    - haskell_platform

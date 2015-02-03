@@ -1,0 +1,5 @@
+---
+# file: vim.yml
+- hosts: all
+  roles:
+    - vim

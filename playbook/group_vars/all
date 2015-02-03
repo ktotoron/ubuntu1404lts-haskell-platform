@@ -1,0 +1,51 @@
+---
+# file: group_vars/all
+arch: x86_64
+vendor: unknown
+os: linux-deb7
+package: apt
+
+user_name: vagrant
+home_dir: /home/{{user_name}}
+
+host_files_dir: ./files
+
+
+# haskell-platform
+haskell_platform_dependencies:
+  - haskell-platform
+
+# vim
+vim_settings_dir: {{ home_dir }}/.vim
+vim_host_files_dir: {{ host_files_dir }}/vim
+vim_host_vimrc_file: {{ vim_host_files_dir }}/.vimrc
+vim_vimrc_file: {{ home_dir }}/.vimrc
+vim_neobundle_dir: {{ vim_settings_dir }}/bundle/neobundle.vim
+vim_neobundle_git_uri: "git://github.com/Shougo/neobundle.vim"
+vim_dependencies:
+  - liblua5.2-dev
+  - liblua5.2-0
+  - lua5.2
+  - luajit
+  - vim
+  - vim-nox
+  - vim-gtk
+  - vim-gnome
+  - vim-athena
+  - ctags
+
+# zsh
+zsh_antigen_git_url: "git://github.com/zsh-users/antigen.git"
+zsh_antigen_dir: {{ home_dir }}/.zsh_ext/antigen.git
+zsh_zshrc_antigen_host_file: {{ host_files_dir }}/zsh/.zshrc.antigen
+zsh_zshrc_antigen_file: {{home_dir}}/.zshrc.antigen
+zsh_zshrc_host_file: {{ host_files_dir }}/zsh/.zshrc
+zsh_zshrc_file: {{home_dir}}/.zshrc
+zsh_binary_file: /usr/bin/zsh
+zsh_dependencies:
+  - zsh
+  - git
+  - git-core
+  - build-essential
+
+

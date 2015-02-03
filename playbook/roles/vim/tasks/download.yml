@@ -1,0 +1,5 @@
+---
+# file: download.yml
+- name: copy .vimrc
+  copy: src={{ vim_host_vimrc_file }} dest={{ vim_vimrc_file }}
+

@@ -1,0 +1,7 @@
+---
+# file: main.yml
+- include: dependency.yml
+- include: download.yml
+- include: install.yml
+
+
