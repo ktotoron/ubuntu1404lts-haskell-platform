@@ -100,6 +100,9 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+# for haskell
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
+
 
 "/NeoComplete-------------------------------------
 
